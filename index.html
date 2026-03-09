@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ko" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KB국민은행 - 모바일 앱</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ffcc00",
+                        "charcoal": "#2d2d2d",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#231f0f",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                        lg: "1rem",
+                        xl: "1.5rem",
+                        full: "9999px",
+                    }
+                }
+            }
+        }
+    </script>
+    <script>
+        (function(f,b){if(!b.__SV){var e,g,i,h;window.mixpanel=b;b._i=[];b.init=function(e,f,c){function g(a,d){var b=d.split(".");2==b.length&&(a=a[b[0]],d=b[1]);a[d]=function(){a.push([d].concat(Array.prototype.slice.call(arguments,0)))}}var a=b;"undefined"!==typeof c?a=b[c]=[]:c="mixpanel";a.people=a.people||[];a.toString=function(a){var d="mixpanel";"mixpanel"!==c&&(d+="."+c);a||(d+=" (stub)");return d};a.people.toString=function(){return a.toString(1)+".people (stub)"};i="disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking start_batch_senders people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove".split(" ");
+        for(h=0;h<i.length;h++)g(a,i[h]);var j="set set_once union unset remove delete".split(" ");a.get_group=function(){function b(c){d[c]=function(){call2_args=arguments;call2=[c].concat(Array.prototype.slice.call(call2_args,0));a.push([e,call2])}}for(var d={},e=["get_group"].concat(Array.prototype.slice.call(arguments,0)),c=0;c<j.length;c++)b(j[c]);return d};b._i.push([e,f,c])};b.__SV=1.2;e=f.createElement("script");e.type="text/javascript";e.async=!0;e.src="https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";g=f.getElementsByTagName("script")[0];g.parentNode.insertBefore(e,g)}})(document,window.mixpanel||[]);
+
+        mixpanel.init('c16b7d1d79c73921b751faad36f03936', {
+            track_pageview: true,
+            persistence: 'localStorage'
+        });
+
+        function track(event, props) {
+            mixpanel.track(event, Object.assign({ page: 'KB_모바일_지갑' }, props || {}));
+        }
+    </script>
+    <style>
+        html {
+            background-color: #f9fafb;
+            overscroll-behavior-y: none;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .icon-stroke-2 {
+            font-variation-settings: 'wght' 400;
+        }
+    </style>
+</head>
+<body class="font-display bg-gray-50 min-h-screen overscroll-none">
+    <!-- Mobile Container -->
+    <div class="max-w-sm mx-auto bg-white min-h-screen shadow-xl relative">
+        
+        <!-- Header -->
+        <header class="bg-white px-4 py-3 flex items-center justify-between border-b border-slate-200">
+            <!-- Interview CTA -->
+            <a href="https://www.proby.io/interview?t=GLQmFsZz" target="_blank" class="flex items-center gap-2" onclick="track('Header_인터뷰참여_클릭', {component: '인터뷰_참여_버튼', url: 'https://www.proby.io/interview?t=GLQmFsZz'})">
+                <div class="bg-purple-600 text-white px-3 py-1.5 rounded-lg text-xs font-bold flex items-center gap-1">
+                    <span class="material-symbols-outlined text-sm">mic</span>
+                    <span>인터뷰 참여</span>
+                </div>
+                <span class="text-slate-900 font-semibold">김국민님</span>
+                <span class="material-symbols-outlined text-slate-400 text-xl">chevron_right</span>
+            </a>
+            
+            <!-- Right Icons -->
+            <div class="flex items-center gap-3">
+                <span class="material-symbols-outlined text-slate-600 text-2xl cursor-pointer" onclick="track('Header_알림_클릭', {component: '알림_아이콘'})">notifications</span>
+                <span class="material-symbols-outlined text-slate-600 text-2xl cursor-pointer" onclick="track('Header_검색_클릭', {component: '검색_아이콘'})">search</span>
+                <span class="material-symbols-outlined text-slate-600 text-2xl cursor-pointer" onclick="track('Header_메뉴_클릭', {component: '햄버거_메뉴'})">menu</span>
+            </div>
+        </header>
+
+        <!-- Promotion Banner (중형 DA · banner-system 준수) -->
+        <div class="relative mx-4 my-4 rounded-[10px] overflow-hidden cursor-pointer" style="aspect-ratio: 981/339;" onclick="track('배너_Proby_클릭', {component: '중형DA_배너', banner_type: 'proby_branding'})">
+            <div class="absolute inset-0 bg-[#E8EFF8] flex items-center justify-between px-5 py-4">
+                <div>
+                    <p class="text-slate-900 text-sm font-bold leading-snug">Proby에서 바이브코딩으로</p>
+                    <p class="text-slate-600 text-xs mt-1">제작했습니다</p>
+                </div>
+                <svg width="80" height="24" viewBox="0 0 80 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <text x="0" y="18" font-family="Manrope, sans-serif" font-weight="800" font-size="20" fill="#1e293b" letter-spacing="-0.5">Proby</text>
+                </svg>
+            </div>
+            <!-- AD Mute (시스템 자동 노출) -->
+            <div class="absolute top-2 right-2 bg-black/25 border border-white rounded-sm px-1" style="font-size:8px; line-height:14px;">
+                <span class="text-white">AD</span>
+            </div>
+        </div>
+
+        <!-- Main Account Card -->
+        <div class="mx-4 mb-6">
+            <div class="bg-white rounded-2xl border border-gray-200 shadow-sm p-5">
+                <!-- Account Header -->
+                <div class="flex items-center justify-between mb-4">
+                    <div class="flex items-center gap-3">
+                        <div class="size-12 rounded-xl bg-primary/20 flex items-center justify-center text-primary">
+                            <span class="material-symbols-outlined text-2xl">account_balance_wallet</span>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-slate-900">KB국민ONE통장</h3>
+                            <p class="text-xs text-slate-500">123401-01-123456</p>
+                        </div>
+                    </div>
+                    <span class="material-symbols-outlined text-slate-400 text-2xl cursor-pointer" onclick="track('계좌_더보기_클릭', {component: 'KB국민ONE통장_더보기', account: 'KB국민ONE통장'})">more_vert</span>
+                </div>
+
+                <!-- Balance -->
+                <div class="mb-4">
+                    <div class="text-2xl font-black text-slate-900 mb-1">3,520,000<span class="text-lg font-medium">원</span></div>
+                    <span class="text-xs text-slate-500 bg-slate-100 px-2 py-1 rounded">송금</span>
+                </div>
+
+                <!-- Transfer Button -->
+                <button class="w-full bg-primary text-charcoal py-3 rounded-xl font-bold hover:brightness-105 active:scale-95 transition-all mb-4" onclick="track('이체_버튼_클릭', {component: '이체_CTA', account: 'KB국민ONE통장', balance: 3520000})">
+                    이체
+                </button>
+
+                <!-- Quick Actions -->
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-4">
+                        <div class="flex flex-col items-center gap-1 cursor-pointer" onclick="track('빠른이체_수신인_클릭', {component: '빠른이체_이어폰', recipient: '이어폰'})">
+                            <div class="size-10 rounded-full bg-primary/20 flex items-center justify-center">
+                                <span class="material-symbols-outlined text-primary text-lg">headphones</span>
+                            </div>
+                            <span class="text-xs text-slate-600">이어폰</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-1 cursor-pointer" onclick="track('빠른이체_수신인_클릭', {component: '빠른이체_김우리', recipient: '김우리'})">
+                            <div class="size-10 rounded-full bg-blue-100 flex items-center justify-center">
+                                <span class="material-symbols-outlined text-blue-600 text-lg">person</span>
+                            </div>
+                            <span class="text-xs text-slate-600">김우리</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-1 cursor-pointer" onclick="track('빠른이체_수신인_클릭', {component: '빠른이체_조하나', recipient: '조하나'})">
+                            <div class="size-10 rounded-full bg-green-100 flex items-center justify-center">
+                                <span class="material-symbols-outlined text-green-600 text-lg">eco</span>
+                            </div>
+                            <span class="text-xs text-slate-600">조하나</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-1 cursor-pointer" onclick="track('빠른이체_수신인_추가_클릭', {component: '빠른이체_추가'})">
+                            <div class="size-10 rounded-full bg-slate-100 flex items-center justify-center">
+                                <span class="material-symbols-outlined text-slate-600 text-lg">add</span>
+                            </div>
+                            <span class="text-xs text-slate-600">+</span>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center gap-2">
+                        <span class="text-xs text-slate-500">1/3</span>
+                        <button class="text-xs text-slate-500 border border-slate-300 px-3 py-1 rounded-full" onclick="track('전체계좌보기_클릭', {component: '전체계좌_보기_버튼'})">
+                            전체계좌 보기
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Savings Section -->
+        <div class="mx-4 mb-6">
+            <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-5">
+                <div class="flex items-center justify-between mb-4">
+                    <div class="flex items-center gap-3 cursor-pointer" onclick="track('모임통장_더보기_클릭', {component: '모임통장_더보기_링크'})">
+                        <h3 class="font-bold text-slate-900">모임통장</h3>
+                        <span class="text-xs text-slate-500">더보기</span>
+                        <span class="material-symbols-outlined text-slate-400 text-xl">chevron_right</span>
+                    </div>
+                </div>
+                
+                <div class="flex items-center justify-between">
+                    <div>
+                        <div class="flex items-center gap-2 mb-1">
+                            <p class="text-sm text-slate-600">우리가족 여행경비</p>
+                            <span class="material-symbols-outlined text-primary text-lg">emoji_events</span>
+                        </div>
+                        <div class="text-xl font-black text-slate-900">1,527,000<span class="text-sm font-medium">원</span></div>
+                        <span class="text-xs text-slate-500 bg-slate-100 px-2 py-1 rounded">송금</span>
+                    </div>
+                    <div class="size-12 rounded-xl bg-green-100 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-green-600 text-2xl">savings</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recent Transaction -->
+        <div class="mx-4 mb-6 cursor-pointer" onclick="track('정기저축_카드_클릭', {component: '이번달_정기저축_카드', amount: 873000})">
+            <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-5">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <p class="font-medium text-slate-900 mb-1">이번 달 정기저축</p>
+                        <p class="text-xs text-slate-500 mb-2">2025.06.19 10:25 기준</p>
+                    </div>
+                    <div class="text-right flex items-center gap-2">
+                        <div class="text-lg font-bold text-slate-900">873,000원</div>
+                        <span class="material-symbols-outlined text-slate-400 text-xl">chevron_right</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Navigation -->
+        <nav class="fixed bottom-0 left-1/2 transform -translate-x-1/2 w-full max-w-sm bg-white border-t border-slate-200 px-4 py-3">
+            <div class="flex items-center justify-around">
+                <div class="flex flex-col items-center gap-1 cursor-pointer" onclick="track('BottomNav_탭_클릭', {component: 'BottomNav_상품', tab: '상품', is_active: false})">
+                    <span class="material-symbols-outlined text-2xl text-slate-400">shopping_bag</span>
+                    <span class="text-xs text-slate-500">상품</span>
+                </div>
+                
+                <div class="flex flex-col items-center gap-1 cursor-pointer" onclick="track('BottomNav_탭_클릭', {component: 'BottomNav_자산', tab: '자산', is_active: false})">
+                    <span class="material-symbols-outlined text-2xl text-slate-400">query_stats</span>
+                    <span class="text-xs text-slate-500">자산</span>
+                </div>
+                
+                <div class="flex flex-col items-center gap-1 relative cursor-pointer" onclick="track('BottomNav_탭_클릭', {component: 'BottomNav_지갑', tab: '지갑', is_active: true})">
+                    <div class="size-14 rounded-full bg-primary flex items-center justify-center shadow-lg transform -translate-y-2">
+                        <span class="material-symbols-outlined text-2xl text-charcoal">account_balance_wallet</span>
+                    </div>
+                    <span class="text-xs font-bold text-slate-900">지갑</span>
+                </div>
+                
+                <div class="flex flex-col items-center gap-1 cursor-pointer" onclick="track('BottomNav_탭_클릭', {component: 'BottomNav_혜택', tab: '혜택', is_active: false})">
+                    <span class="material-symbols-outlined text-2xl text-slate-400">card_giftcard</span>
+                    <span class="text-xs text-slate-500">혜택</span>
+                </div>
+                
+                <div class="flex flex-col items-center gap-1 cursor-pointer" onclick="track('BottomNav_탭_클릭', {component: 'BottomNav_메뉴', tab: '메뉴', is_active: false})">
+                    <span class="material-symbols-outlined text-2xl text-slate-400">description</span>
+                    <span class="text-xs text-slate-500">메뉴</span>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Bottom Padding for Fixed Nav -->
+        <div class="h-24"></div>
+    </div>
+</body>
+</html>
